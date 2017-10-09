@@ -35,6 +35,7 @@
   "tl_html_on": "查看html文本",
   "tl_html_off": "返回markdown文本",
   "tl_help": "markdown语法帮助",
-  "tl_upload": "上传图片",
+  "tl_upload": "添加图片",
+  "tl_submit": "上传图片",
   "tl_upload_remove": "删除"
 }

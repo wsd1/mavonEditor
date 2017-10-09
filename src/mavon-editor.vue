@@ -3,7 +3,7 @@
         <!--工具栏-->
         <div class="v-note-op" v-show="toolbarsFlag">
             <s-md-toolbar-left ref="toolbar_left" :editable="editable" :d_words="d_words" @toolbar_left_click="toolbar_left_click" :toolbars="toolbars"
-                               @imgAdd="$imgAdd" @imgDel="$imgDel" @imgTouch="$imgTouch"/>
+                               @imgAdd="$imgAdd" @imgDel="$imgDel" @imgSubmit="$imgSubmit" @imgTouch="$imgTouch"/>
             <s-md-toolbar-right ref="toolbar_right" :d_words="d_words" @toolbar_right_click="toolbar_right_click" :toolbars="toolbars"
                                 :s_subfield="s_subfield"
                                 :s_preview_switch="s_preview_switch" :s_fullScreen="s_fullScreen" :s_html_code="s_html_code"
@@ -307,6 +307,9 @@
                 this.s_markdown.image_del(pos);
                 this.d_render = this.s_markdown.render(this.d_value);
                 this.$emit('imgDel', pos);
+            },
+            $imgSubmit(){
+                this.$emit('imgSubmit');
             },
             $imgAdd(pos, $file, isinsert){
                 if(isinsert === undefined) isinsert = true;
